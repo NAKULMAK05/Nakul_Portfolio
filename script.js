@@ -36,8 +36,8 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 document.getElementById("downloadButton").addEventListener("click", function() {
     var link = document.createElement('a');
-    link.href = 'nakul_resume_new.pdf'; // Assuming your CV file name is "nakul_Resume (2).pdf"
-    link.download = 'nakul_resume_new.pdf'; // Name of the file to be downloaded
+    link.href = 'Nakul Indust Resume.pdf'; 
+    link.download = 'Nakul Indust Resume.pdf'; 
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
