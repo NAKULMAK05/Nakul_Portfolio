@@ -2,6 +2,30 @@ function redirectToContact() {
     window.location.href = "#contact";
 }
 
+    emailjs.init("wS6_bi2vSleLvQldx"); // Replace with your EmailJS Public Key
+
+    document.getElementById("contact-form").addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent form from reloading
+
+        // Collect form data
+        const formData = {
+            from_name: document.getElementById("name").value,
+            from_email: document.getElementById("email").value,
+            subject: document.getElementById("subject").value,
+            message: document.getElementById("message").value,
+        };
+
+        // Send email using EmailJS
+        emailjs.send("service_0xljn2h", "template_q7cposp", formData)
+            .then(response => {
+                alert("Message sent successfully!");
+                document.getElementById("contact-form").reset(); // Clear form
+            })
+            .catch(error => {
+                alert("Failed to send message. Try again later.");
+                console.error("EmailJS Error:", error);
+            });
+    });
 
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.querySelector(".contact form");
