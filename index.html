@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1UeQwAX+ZHlo0QZKa6f2zg0U2ivpY6lu+mwZ7w0EKWj6ZeEUvdR95Sz9Yo1+B+N0aJ4NqDreBfMSjpzsfHrqIA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -228,14 +229,14 @@
                     <h2>Contact</h2>
                 </div>
                 <div class="contact" >
-                    <form method="post" action="send_email.php"> 
-                        <h2>Just Say Hello</h2>
-                        <input type="text" name="name" class="name" placeholder="Your Name">
-                        <input type="email" name="email" class="email" placeholder="Your Email">
-                        <input type="text" name="subject" class="subject" placeholder="Your Subject">
-                        <textarea name="message" class="message" placeholder="Your Message"></textarea>
-                        <button type="submit">Send Message</button>
-                    </form>
+                    <form id="contact-form">
+                    <h2>Just Say Hello</h2>
+                    <input type="text" name="name" id="name" placeholder="Your Name" required>
+                    <input type="email" name="email" id="email" placeholder="Your Email" required>
+                    <input type="text" name="subject" id="subject" placeholder="Your Subject" required>
+                    <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
                     <div class="content">
                         <h2>Contact Info</h2>
                         <p>
