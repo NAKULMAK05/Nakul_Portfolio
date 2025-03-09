@@ -60,8 +60,8 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 document.getElementById("downloadButton").addEventListener("click", function() {
     var link = document.createElement('a');
-    link.href = 'Nakul Indust Resume.pdf'; 
-    link.download = 'Nakul Indust Resume.pdf'; 
+    link.href = 'nakul_res.pdf'; 
+    link.download = 'nakul_res.pdf'; 
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
